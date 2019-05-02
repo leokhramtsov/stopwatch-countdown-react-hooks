@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 50rem;;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.4rem;
+
+  @media screen and (min-width: 37.5em) {
+    font-size: 2.8rem;
+  }
+}
+
+.component__title {
+  font-size: 2.2rem;
+}
+
+.display {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 1.5rem 0;
+}
+
+.countdown {
+  &__info {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+// Time adjuster
+.time-adjuster {
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  font-size: 1.6rem;
+
+  input[type="number"] {
+    width: 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2px;
+    border: none;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+  }
+
+  .input-group {
+    display: grid;
+    justify-items: center;
+  }
+
+  .minutes {
+    justify-self: right;
+  }
+
+  .seconds {
+    justify-self: left;
+  }
+}
+
+button {
+  display: inline-block;
+  width: 8rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: .5rem;
+  transition: all .3s;
+  margin: 0 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+}
+
+.btn {
+  &__start {
+    border-color: #14a30f;
+
+    &:hover {
+      background-color: #14a30f;
+      color: #fff;
+    }
+  }
+
+    &__stop {
+    border-color: #da1414;
+
+    &:hover {
+      background-color: #da1414;
+      color: #fff;
+    }
+  }
+
+    &__reset {
+    border-color: #190fa3;
+
+    &:hover {
+      background-color: #190fa3;
+      color: #fff;
+    }
+  }
+    &__lap{
+    border-color: #970fa3;
+
+    &:hover {
+      background-color: #970fa3;
+      color: #fff;
+    }
+  }
+}
+
+// Laps
+ul.laps {
+  list-style: none;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.lap {
+  margin: .5rem;
+  
+  &__id {
+  display: inline-block;
+  margin-right: 3rem;
+  font-weight: bold;
+  }
+
+  &__time {
+  display: inline-block;
+  margin-left: 3rem;
+}
+}
+
+hr {
+  border-top: 1px dotted #000;
+  margin: 3rem 0;
+}
